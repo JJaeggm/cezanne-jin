@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 li {
@@ -12,25 +16,115 @@ a {
     color: inherit;
 }
 
-#wrap {
+
+.wrap {
+    position: relative;
     margin: 20px auto;
     width: 800px;
     height: 500px;
     border-radius: 20px;
     background-color: skyblue;
-    outline: 1px dotted red;
+    border: 5px solid rgb(0, 0, 0);
+    border-right: 8px solid rgb(0, 0, 0);
+    border-bottom: 8px solid rgb(0, 0, 0);
+    /* outline: 1px dotted red; */
 }
 
-#menu {
+.menu_frame {
+    position: absolute;
+
+    transform:translateX(-183px);
+    /* left: -183px;   */
+    /* left: 0px; */
+    box-sizing: border-box;
+    transition: all 0.2s ease;  
+}
+
+.menu_frame.open {
+    transform: translateX(0);
+    /* left: 0px; */
+}
+
+
+.menu_button > label {
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 120px;
+    left: 180px;
+    top: 150px;
+    padding-right: 6px;
+    text-align: center;
+    background-color: #032635;
+    border-radius: 0 8px 8px 0;
+    font-size: 23px;
+    font-weight: 700;
+    color: white;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    border: 2px solid rgb(0, 0, 0);
+    border-right: 5px solid rgb(0, 0, 0);
+    border-bottom: 5px solid rgb(0, 0, 0);
+
+}
+
+.menu_button > label:hover {
+    cursor: pointer;
+    user-select:none;
+
+}
+
+/* menu_frame에 open이 붙었을 때 menu_box의 opacity를 1로 바꿔주기 */
+
+
+.menu_box {
+    /* display: none; */
+    width: 180px;
+    height: 500px;
+    background-color: #032f40;
+    border-radius: 14px 0 0 14px;
+    box-sizing: border-box;
+    opacity:0;
+    transition: all 0.2s ease;  
+    /* outline: 1px dotted red; */
+}
+
+.menu_frame.open .menu_box {
+
+    opacity: 1;
+}
+
+
+.menu_list {
+    padding-left: 30px;
+    padding-top: 70px;
+}
+
+
+.menu_list > li > a {
+    display: block;
+    width: 120px;
+    height: 30px;
+    margin-top: 10px; 
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: #1C66A6;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    border-right: 5px solid rgb(0, 0, 0);
+    border-bottom: 5px solid rgb(0, 0, 0);
+    /* outline: 1px dotted red; */
+}
+
+.menu_list > li > a:hover {
+    background-color: #3e9bed;
+
+}
+
+/* #hiddenClickmenu_button {
     display: none;
-    width: 250px;
-    height: 500px;
-    background-color: whitesmoke;
-    outline: 1px dotted red;
-}
+} */
 
-#bookmark {
-    width: 50px;
-    height: 500px;
-    background-color: rgb(13, 130, 177);
-}
