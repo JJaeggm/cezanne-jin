@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#wrap {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    border-radius: 20px;
+    background-color: skyblue;
+    outline: 1px dotted red;
+}
+
+#menu {
+    display: none;
+    width: 250px;
+    height: 500px;
+    background-color: whitesmoke;
+    outline: 1px dotted red;
+}
+
+#bookmark {
+    width: 50px;
+    height: 500px;
+    background-color: rgb(13, 130, 177);
+}

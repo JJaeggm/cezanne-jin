@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    
+    <script>
+        const result = document.getElementById('result');
+
+        let contents = '';
+        contents += '<h3>구구단표</h3>';
+        contents += '<table border="1">';
+        contents += '<tr><th>2단</th></tr><tr><th>3단</th></tr><tr><th>4단</th></tr><tr><th>5단</th></tr><tr><th>6단</th></tr><tr><th>7단</th></tr><tr><th>8단</th></tr><tr><th>9단</th></tr>';
+
+        for(let i = 1; i <= 9; i++) {
+            contents += '<tr>';
+            for(let j = 2; j <= 9; j++) {
+                contents += `<td>${j}X${i}=${i*j}</td>`;
+            }
+            contents += '</tr>';
+        }
+        contents += "</table>";
+        result.innerHTML = contents;
+
+    </script>
+
+    <script>
+        function hello() {
+            document.write('안녕하세요.<br>');
+        }
+
+        hello();
+        hello();
+        hello();
+    </script>
+
+    <button>인사하기</button>
+
+    <script>
+        function hello1() {
+            name='홍길동';
+            alert(`${name}님 반갑습니다.`);
+        }
+    </script>
+
+    <button onclick="hello2('홍길동')">버튼1</button>
+    <button onclick="hello2('홍지수')">버튼2</button>
+
+    <script>
+        function hello2(name) {
+            alert(`${name}님 반갑습니다.`);
+        }
+    </script>
+
+    <script>
+        function add(a, b) {
+            let c = a + b;
+            document.write(c, "<br>");
+        }
+
+        add(5, 7);
+        add(10, 15);
+        add(-3, -11);
+
+    </script>
+
+    <script>
+        function add2(5, 7);
+        document.write(value, "<br>");
+    </script>
+
+
+    <script>
+        // 함수로 정수의 합계 구하기
+        function sum_init(a, b) {
+            let sum = 0;
+            for(let i = a; i < b; i++) {
+
+            }
+            return sum_init;
+        }
+        let start = 100;
+        let end = 300;
+        let value2;
+
+        value2 = sum_init(start, end);
+
+        document.write(`${start}에서 ${end}까지의 합계 : ${value2}`);
+    </script>
+
+
+    <script>
+        // 함수로 5의 배수 판별하기
+        function is_besu5(n) {
+            let str;
+            if(n) {
+                str = `${n}은 5의 배수이다.`;
+            } else {
+                str = `${n}은 5의 배수가 아니다.`; 
+            }
+            return is_besu5;
+        }
+
+        let num = 15;
+        let message;
+    </script>
+</body>
+</html>

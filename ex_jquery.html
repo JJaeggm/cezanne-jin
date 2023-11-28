@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .red {
+            background-color: red;
+            color: #fff;
+        }
+
+        .blue {
+            background-color: blue;
+            color: #fff;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <p id="para" style="background-color: yellow;">기준</p>
+    
+    <button id="btn1">앞에 삽입하기</button>
+    <button id="btn2">뒤에 삽입하기</button>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(function() {
+            $("#btn1").click(function() {
+                $("#para").before("<p style='color:red;'>안녕하세요.</p>");
+            });
+            $("#btn1").click(function() {
+                $("#para").after("<p style='color:blue;'>반갑습니다.</p>");
+            });
+        });
+    </script>
+    
+    <div id="box">
+        <p>안녕하세요.</p>
+        <p>반갑습니다.</p>
+    </div>
+
+    <button id="btn3">요소 삭제하기</button>
+
+    <script>
+        $("#btn3").click(function() {
+            $("#box").remove();
+        });
+    </script>
+
+    <div id="ex01">
+        <h2>제목1</h2>
+        <p>단락1</p>
+
+        <h2>제목2</h2>
+        <p>단락2</p>
+
+        <button id="btn4">red 클래스 더하기</button>
+        <button id="btn5">blue 클래스 더하기</button>
+        <button id="btn6">red 클래스 삭제하기</button>
+        <button id="btn7">dd</button>
+        <button id="btn8">dd</button>
+    </div>
+
+    <script>
+        $("#btn4").click(function() {
+            $("#ex01 h2").addClass('red');
+        });
+
+        $("#btn5").click(function() {
+            $("#ex01 p").addClass('blue');
+        });
+
+        $("#btn6").click(function() {
+            $("#ex01 h2").removeClass('red');
+        });
+
+        $("#btn7").click(function() {
+            $("#ex01").css("border", "3px double pink");
+        });
+
+        $("#btn8").click(function() {
+            let border = $("#ex01").css("border");
+            let color = $("#ex01 h2").css('color');
+            alert(border + '\n' + color);
+        });
+
+
+    </script>
+
+</body>
+</html>
